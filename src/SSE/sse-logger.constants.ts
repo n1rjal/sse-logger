@@ -1,0 +1,2 @@
+export const SSE_USE_WEB_TOKEN = 'USE_WEB';
+export const SSE_LOGGER_SUBJECT_TOKEN = 'SSE_LOGGER_SUBJECT';
