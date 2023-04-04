@@ -6,7 +6,6 @@ import {
   SSE_LOGGER_SUBJECT_TOKEN,
   SSE_USE_WEB_TOKEN,
 } from './sse-logger.constants';
-import { Subject } from 'rxjs';
 import sseSubject from './sse-subject.instance';
 
 @Module({})

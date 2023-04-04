@@ -25,11 +25,12 @@ export class SseLoggerService extends Logger {
         const origMethod = target[key];
         if (typeof origMethod == 'function') {
           return function (...args: any) {
-            sseSubject.next({
-              data: args[0],
-              id: new Date().toJSON(),
-              type: key.toString(),
-            });
+            if (this.useWeb)
+              this.sseSubject.next({
+                data: args[0],
+                id: new Date().toJSON(),
+                type: key.toString(),
+              });
             let result = origMethod.apply(target, args);
             return result;
           };
