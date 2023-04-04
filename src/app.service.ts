@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { SseLoggerService } from './SSE/sse-logger.service';
+import { SseLoggerService } from './sse-logger/sse-logger.service';
 
 @Injectable()
 export class AppService {

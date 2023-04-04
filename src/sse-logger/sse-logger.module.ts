@@ -7,6 +7,7 @@ import {
   SSE_USE_WEB_TOKEN,
 } from './sse-logger.constants';
 import { Subject } from 'rxjs';
+import sseSubject from './sse-subject.instance';
 
 @Module({})
 export class SSELoggerModule {
@@ -26,7 +27,7 @@ export class SSELoggerModule {
         },
         {
           provide: SSE_LOGGER_SUBJECT_TOKEN,
-          useValue: new Subject<MessageEvent>(),
+          useValue: sseSubject,
         },
       ],
       exports: [SseLoggerService],
